@@ -1,17 +1,15 @@
 <body>
-    <h1>Welcome to Meteor!</h1>
-
-    {{> hello}}
+    <h1 style="text-align: center">Aplikasi Chat Sederhana</h1>
+    <div class="container">
+        {{#each chats}}
+            {{> tabelchat}}
+        {{/each}}
+    </div>
 </body>
 
-<template name="hello">
-    <div class="jumbotron">
-        <h1 class="display-3">Hello, world!</h1>
-        <p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
-        <hr class="m-y-md">
-        <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
-        <p class="lead">
-            <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
-        </p>
+<template name="tabelchat">
+    <div class="card card-block">
+        <h4 class="card-title">{{nama}} | {{waktu}}</h4>
+        <p class="card-text">{{pesan}}</p>
     </div>
 </template>
