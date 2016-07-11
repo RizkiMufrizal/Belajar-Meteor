@@ -1,2 +1,2 @@
-import '../imports/ui/body';
+import '../imports/ui/chat';
 import 'bootstrap';

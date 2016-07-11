@@ -1,7 +1,7 @@
 import { Template } from 'meteor/templating';
 import { Chats } from '../api/chats';
 
-import './body.html';
+import './chat.html';
 
 Template.body.helpers({
   chats() {
