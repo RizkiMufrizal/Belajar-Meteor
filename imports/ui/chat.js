@@ -12,3 +12,18 @@ Template.body.helpers({
     });
   }
 });
+
+Template.body.events({
+  'submit #form-kirim-pesan'(event) {
+    event.preventDefault();
+
+    Chats.insert({
+      'nama': event.target.nama.value,
+      'pesan': event.target.pesan.value,
+      'waktu': new Date()
+    });
+
+    event.target.nama.value = '';
+    event.target.pesan.value = '';
+  }
+});
